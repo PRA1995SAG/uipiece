@@ -10,15 +10,17 @@ import {
 } from "react-native";
 import Colors from "../constants/color";
 import DefaultText from "./DefaultText";
+import { useNavigation } from "@react-navigation/native";
 
 const GuruItem = (props) => {
+  const navigation = useNavigation();
   let TouchCmp = TouchableOpacity;
   if (Platform.OS === "android" && Platform.Version >= 21) {
     TouchCmp = TouchableNativeFeedback;
   }
 
   return (
-    <TouchCmp useForeground>
+    <TouchCmp useForeground onPress={() => navigation.navigate("Detail")}>
       <View style={styles.item}>
         <View
           style={{

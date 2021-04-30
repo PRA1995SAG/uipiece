@@ -20,7 +20,7 @@ const Header = (props) => {
       <View style={styles.itemContainer}>
         <View style={styles.inputContainer}>
           <TextInput
-            placeholder="find guru"
+            placeholder="search here..."
             style={styles.input}
             selectionColor="#315ba0"
           />

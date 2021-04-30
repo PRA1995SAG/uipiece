@@ -13,9 +13,9 @@ import * as Font from "expo-font";
 import AppLoading from "expo-app-loading";
 import { NavigationContainer } from "@react-navigation/native";
 import RootStackNavigator from "./app/navigation/RootStackNavigator";
+import { Asset } from "expo-asset";
 
 import Header from "./app/components/Header";
-import GuruList from "./app/components/GuruList";
 
 const fetchFonts = async () => {
   await Font.loadAsync({
@@ -25,6 +25,7 @@ const fetchFonts = async () => {
     "quicksand-regular": require("./assets/fonts/static/Quicksand-Regular.ttf"),
     "quicksand-semibold": require("./assets/fonts/static/Quicksand-SemiBold.ttf"),
   });
+  await Asset.loadAsync(require("./assets/faceImage.jpg"));
 };
 
 export default function App() {

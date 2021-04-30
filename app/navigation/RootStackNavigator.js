@@ -1,6 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "../screens/HomeScreen";
+import DetailScreen from "../screens/DetailScreen";
 import Colors from "../constants/color";
 import { Platform } from "react-native";
 
@@ -22,6 +23,11 @@ function RootStackNavigator() {
         name="Home"
         component={HomeScreen}
         options={{ title: "Home Screen" }}
+      />
+      <Stack.Screen
+        name="Detail"
+        component={DetailScreen}
+        options={{ title: "Detail Screen" }}
       />
     </Stack.Navigator>
   );
